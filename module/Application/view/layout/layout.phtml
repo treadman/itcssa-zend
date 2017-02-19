@@ -46,18 +46,7 @@
         <br>
         <div class="container">
             <?php
-                // TODO: This seems kludgy, but I'm in a hurry.  This is loading the content, then checking authentication.
-                // Get the current route to see if user needs to be logged in
-                if (isset($_SERVER["REDIRECT_URL"])) :
-                    $current_route = substr($_SERVER["REDIRECT_URL"],1);
-                else:
-                    $current_route = "website";
-                endif;
-                $whitelist = array(
-                    "user/login",
-                    "user/register",
-                    "application"
-                );
+                echo $this->content;
             ?>
             <hr>
             <footer>
