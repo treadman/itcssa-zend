@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbc4cf51d583edd647a090e9419d33ef",
+    "content-hash": "6534912785def44dc9dfd061496340d2",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -32,6 +32,116 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "time": "2014-12-30T15:22:37+00:00"
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "v2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
+                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/random.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "pseudorandom",
+                "random"
+            ],
+            "time": "2016-11-07T23:38:38+00:00"
+        },
+        {
+            "name": "zendframework/zend-authentication",
+            "version": "2.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-authentication.git",
+                "reference": "1422dec160eb769c719cad2229847fcbf20a1405"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-authentication/zipball/1422dec160eb769c719cad2229847fcbf20a1405",
+                "reference": "1422dec160eb769c719cad2229847fcbf20a1405",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-crypt": "^2.6",
+                "zendframework/zend-db": "^2.7",
+                "zendframework/zend-http": "^2.5.4",
+                "zendframework/zend-ldap": "^2.6",
+                "zendframework/zend-session": "^2.6.2",
+                "zendframework/zend-uri": "^2.5",
+                "zendframework/zend-validator": "^2.6"
+            },
+            "suggest": {
+                "zendframework/zend-crypt": "Zend\\Crypt component",
+                "zendframework/zend-db": "Zend\\Db component",
+                "zendframework/zend-http": "Zend\\Http component",
+                "zendframework/zend-ldap": "Zend\\Ldap component",
+                "zendframework/zend-session": "Zend\\Session component",
+                "zendframework/zend-uri": "Zend\\Uri component",
+                "zendframework/zend-validator": "Zend\\Validator component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev",
+                    "dev-develop": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Authentication\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides an API for authentication and includes concrete authentication adapters for common use case scenarios",
+            "homepage": "https://github.com/zendframework/zend-authentication",
+            "keywords": [
+                "Authentication",
+                "zf2"
+            ],
+            "time": "2016-02-28T15:02:34+00:00"
         },
         {
             "name": "zendframework/zend-cache",
@@ -256,6 +366,57 @@
             "time": "2016-02-04T23:01:10+00:00"
         },
         {
+            "name": "zendframework/zend-crypt",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-crypt.git",
+                "reference": "274cdcb77a2165d6aff36b606e9d1c687ba9386c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-crypt/zipball/274cdcb77a2165d6aff36b606e9d1c687ba9386c",
+                "reference": "274cdcb77a2165d6aff36b606e9d1c687ba9386c",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "~1.0",
+                "ext-mbstring": "*",
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-math": "^3.0",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.6.7",
+                "squizlabs/php_codesniffer": "^2.3.1"
+            },
+            "suggest": {
+                "ext-openssl": "Required for most features of Zend\\Crypt"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev",
+                    "dev-develop": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Crypt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-crypt",
+            "keywords": [
+                "crypt",
+                "zf2"
+            ],
+            "time": "2016-12-06T15:33:37+00:00"
+        },
+        {
             "name": "zendframework/zend-db",
             "version": "2.8.2",
             "source": {
@@ -311,132 +472,6 @@
                 "zf2"
             ],
             "time": "2016-08-09T19:28:55+00:00"
-        },
-        {
-            "name": "zendframework/zend-debug",
-            "version": "2.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-debug.git",
-                "reference": "b6f9df59155391ca683c479a0d758f66ef73b3b3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-debug/zipball/b6f9df59155391ca683c479a0d758f66ef73b3b3",
-                "reference": "b6f9df59155391ca683c479a0d758f66ef73b3b3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.23"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "zendframework/zend-escaper": "2.*"
-            },
-            "suggest": {
-                "ext/xdebug": "XDebug, for better backtrace output",
-                "zendframework/zend-escaper": "To support escaped output"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.5-dev",
-                    "dev-develop": "2.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Debug\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "homepage": "https://github.com/zendframework/zend-debug",
-            "keywords": [
-                "debug",
-                "zf2"
-            ],
-            "time": "2015-06-03T14:05:35+00:00"
-        },
-        {
-            "name": "zendframework/zend-developer-tools",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/ZendDeveloperTools.git",
-                "reference": "ca6a675f0192b4cc343e99914ebfb4a22848365d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/ZendDeveloperTools/zipball/ca6a675f0192b4cc343e99914ebfb4a22848365d",
-                "reference": "ca6a675f0192b4cc343e99914ebfb4a22848365d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0",
-                "zendframework/zend-debug": "^2.5 || ^3.0",
-                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
-                "zendframework/zend-modulemanager": "^2.7",
-                "zendframework/zend-mvc": "^2.7 || ^3.0.1",
-                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-                "zendframework/zend-stdlib": "^2.7 || ^3.0",
-                "zendframework/zend-view": "^2.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0",
-                "squizlabs/php_codesniffer": "~2.3.1"
-            },
-            "suggest": {
-                "aist/aist-git-tools": "Show you informations about current GIT repository",
-                "bjyoungblood/bjy-profiler": "Version: dev-master, allows the usage of the (Zend) Db collector.",
-                "doctrine/doctrine-orm-module": "Profile DoctrineORM queries",
-                "jhuet/zdt-logger-module": "Show you log data from Zend\\Log",
-                "ocramius/ocra-service-manager": "OcraServiceManager can help you track dependencies within your application.",
-                "san/san-session-toolbar": "SanSessionToolbar can help you see current Zend\\Session data you're using within your application.",
-                "snapshotpl/zf-snap-event-debugger": "ZfSnapEventDebugger can help you debug events from Zend\\EventManager"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev",
-                    "dev-develop": "1.2-dev"
-                },
-                "zf": {
-                    "module": "ZendDeveloperTools"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ZendDeveloperTools\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Evan Coury",
-                    "email": "me@evancoury.com",
-                    "homepage": "http://blog.evan.pro/"
-                },
-                {
-                    "name": "Eric Boh",
-                    "email": "cossish@gmail.com"
-                }
-            ],
-            "description": "Module for developer and debug tools for use with zend-mvc applications.",
-            "homepage": "https://github.com/zendframework/ZendDeveloperTools",
-            "keywords": [
-                "debug",
-                "developer",
-                "module",
-                "zf2"
-            ],
-            "time": "2016-09-08T13:53:58+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -952,6 +987,56 @@
             "time": "2015-06-03T14:05:47+00:00"
         },
         {
+            "name": "zendframework/zend-math",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-math.git",
+                "reference": "fda3b4e6c3bb15c35adc6db38b2eacabaa243e65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-math/zipball/fda3b4e6c3bb15c35adc6db38b2eacabaa243e65",
+                "reference": "fda3b4e6c3bb15c35adc6db38b2eacabaa243e65",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "paragonie/random_compat": "^2.0.2",
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-bcmath": "If using the bcmath functionality",
+                "ext-gmp": "If using the gmp functionality"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev",
+                    "dev-develop": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Math\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-math",
+            "keywords": [
+                "math",
+                "zf2"
+            ],
+            "time": "2016-04-28T17:37:42+00:00"
+        },
+        {
             "name": "zendframework/zend-modulemanager",
             "version": "2.7.2",
             "source": {
@@ -1232,6 +1317,72 @@
                 "zf"
             ],
             "time": "2016-06-01T16:50:58+00:00"
+        },
+        {
+            "name": "zendframework/zend-session",
+            "version": "2.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-session.git",
+                "reference": "346e9709657b81a5d53d70ce754730a26d1f02f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-session/zipball/346e9709657b81a5d53d70ce754730a26d1f02f2",
+                "reference": "346e9709657b81a5d53d70ce754730a26d1f02f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "container-interop/container-interop": "^1.1",
+                "fabpot/php-cs-fixer": "1.7.*",
+                "mongodb/mongodb": "^1.0.1",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-cache": "^2.6.1",
+                "zendframework/zend-db": "^2.7",
+                "zendframework/zend-http": "^2.5.4",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-validator": "^2.6"
+            },
+            "suggest": {
+                "mongodb/mongodb": "If you want to use the MongoDB session save handler",
+                "zendframework/zend-cache": "Zend\\Cache component",
+                "zendframework/zend-db": "Zend\\Db component",
+                "zendframework/zend-http": "Zend\\Http component",
+                "zendframework/zend-servicemanager": "Zend\\ServiceManager component",
+                "zendframework/zend-validator": "Zend\\Validator component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev",
+                    "dev-develop": "2.8-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Session",
+                    "config-provider": "Zend\\Session\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Session\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "manage and preserve session data, a logical complement of cookie data, across multiple page requests by the same client",
+            "homepage": "https://github.com/zendframework/zend-session",
+            "keywords": [
+                "session",
+                "zf2"
+            ],
+            "time": "2016-07-05T18:32:50+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -1533,17 +1684,143 @@
             "time": "2016-06-22T20:39:20+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "zendframework/zend-debug",
+            "version": "2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-debug.git",
+                "reference": "b6f9df59155391ca683c479a0d758f66ef73b3b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-debug/zipball/b6f9df59155391ca683c479a0d758f66ef73b3b3",
+                "reference": "b6f9df59155391ca683c479a0d758f66ef73b3b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-escaper": "2.*"
+            },
+            "suggest": {
+                "ext/xdebug": "XDebug, for better backtrace output",
+                "zendframework/zend-escaper": "To support escaped output"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev",
+                    "dev-develop": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Debug\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-debug",
+            "keywords": [
+                "debug",
+                "zf2"
+            ],
+            "time": "2015-06-03T14:05:35+00:00"
+        },
+        {
+            "name": "zendframework/zend-developer-tools",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/ZendDeveloperTools.git",
+                "reference": "ca6a675f0192b4cc343e99914ebfb4a22848365d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/ZendDeveloperTools/zipball/ca6a675f0192b4cc343e99914ebfb4a22848365d",
+                "reference": "ca6a675f0192b4cc343e99914ebfb4a22848365d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-debug": "^2.5 || ^3.0",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-modulemanager": "^2.7",
+                "zendframework/zend-mvc": "^2.7 || ^3.0.1",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0",
+                "zendframework/zend-view": "^2.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0",
+                "squizlabs/php_codesniffer": "~2.3.1"
+            },
+            "suggest": {
+                "aist/aist-git-tools": "Show you informations about current GIT repository",
+                "bjyoungblood/bjy-profiler": "Version: dev-master, allows the usage of the (Zend) Db collector.",
+                "doctrine/doctrine-orm-module": "Profile DoctrineORM queries",
+                "jhuet/zdt-logger-module": "Show you log data from Zend\\Log",
+                "ocramius/ocra-service-manager": "OcraServiceManager can help you track dependencies within your application.",
+                "san/san-session-toolbar": "SanSessionToolbar can help you see current Zend\\Session data you're using within your application.",
+                "snapshotpl/zf-snap-event-debugger": "ZfSnapEventDebugger can help you debug events from Zend\\EventManager"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev",
+                    "dev-develop": "1.2-dev"
+                },
+                "zf": {
+                    "module": "ZendDeveloperTools"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ZendDeveloperTools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                },
+                {
+                    "name": "Eric Boh",
+                    "email": "cossish@gmail.com"
+                }
+            ],
+            "description": "Module for developer and debug tools for use with zend-mvc applications.",
+            "homepage": "https://github.com/zendframework/ZendDeveloperTools",
+            "keywords": [
+                "debug",
+                "developer",
+                "module",
+                "zf2"
+            ],
+            "time": "2016-09-08T13:53:58+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "zendframework/zend-component-installer": 20,
-        "zendframework/zend-skeleton-installer": 20
+        "zendframework/zend-component-installer": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": {}
+        "php": "^5.6 || ^7.0"
     },
     "platform-dev": []
 }
