@@ -9,6 +9,7 @@
  * 
  * Release 2.0.0b
  * 
+ * "doctrine/doctrine-orm-module": "^1.1" was in composer.json
  *  */
 
 
