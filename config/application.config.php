@@ -4,7 +4,15 @@
  * there is an example in the documentation
  * @see https://docs.zendframework.com/tutorials/advanced-config/#environment-specific-system-configuration
  * @see https://docs.zendframework.com/tutorials/advanced-config/#environment-specific-application-configuration
- */
+
+ * ITC SSA
+ * 
+ * Release 2.0.0b
+ * 
+ * "doctrine/doctrine-orm-module": "^1.1" was in composer.json
+ *  */
+
+
 return [
     // Retrieve list of modules used in this application.
     'modules' => require __DIR__ . '/modules.config.php',
