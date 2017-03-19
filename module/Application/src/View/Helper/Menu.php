@@ -55,8 +55,8 @@ class Menu extends AbstractHelper
     {
         if (count($this->items)==0)
             return ''; // Do nothing if there are no items.
-        
-        $result = '<nav class="navbar navbar-default" role="navigation">';
+        $result = '<nav class="navbar navbar-default navbar-fixed-top" role="navigation">';
+        $result .= '<div class="container">';
         $result .= '<div class="navbar-header">';
         $result .= '<button type="button" class="navbar-toggle" data-toggle="collapse"';
         $result .= 'data-target=".navbar-ex1-collapse">';
@@ -65,6 +65,7 @@ class Menu extends AbstractHelper
         $result .= '<span class="icon-bar"></span>';
         $result .= '<span class="icon-bar"></span>';
         $result .= '</button>';
+        $result .= '<a class="navbar-brand" href="/"><img src="/img/new-logo.png" alt="ITC"/></a>';
         $result .= '</div>';
         
         $result .= '<div class="collapse navbar-collapse navbar-ex1-collapse">';        
@@ -76,6 +77,7 @@ class Menu extends AbstractHelper
         }
         
         $result .= '</ul>';
+        $result .= '</div>';
         $result .= '</div>';
         $result .= '</nav>';
         

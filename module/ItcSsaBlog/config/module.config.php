@@ -66,19 +66,9 @@ return [
     ],
     // The following registers our custom view 
     // helper classes in view plugin manager.
-    'view_helpers' => [
-        'factories' => [
-            View\Helper\Menu::class => InvokableFactory::class,
-            View\Helper\Breadcrumbs::class => InvokableFactory::class,
-        ],
-        'aliases' => [
-            'mainMenu' => View\Helper\Menu::class,
-            'pageBreadcrumbs' => View\Helper\Breadcrumbs::class,
-        ],
-    ],
     'view_manager' => [
         'template_map' => [
-            'itcssablog/index/index' => __DIR__ . '/../view/itcssablog/index/index.phtml',
+            'layout/blog'           => __DIR__ . '/../view/layout/blog.phtml',
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',

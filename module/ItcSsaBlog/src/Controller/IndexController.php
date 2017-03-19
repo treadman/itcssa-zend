@@ -13,9 +13,10 @@ use DoctrineORMModule\Paginator\Adapter\DoctrinePaginator as DoctrineAdapter;
 use Doctrine\ORM\Tools\Pagination\Paginator as ORMPaginator;
 use Zend\Paginator\Paginator;
 use ItcSsaBlog\Entity\Post;
+use Zend\Mvc\MvcEvent;
 
 /**
- * This is the main controller class of the Blog application. The 
+ * This is the main controller class of the Blog. The 
  * controller class is used to receive user input,  
  * pass the data to the models and pass the results returned by models to the 
  * view for rendering.
@@ -43,6 +44,22 @@ class IndexController extends AbstractActionController
         $this->postManager = $postManager;
     }
     
+    /** 
+     * We override the parent class onDispatch() method to
+     * set an alternative layout for all actions in this controller.
+     */
+    public function onDispatch(MvcEvent $e)
+    {
+      // Call the base class' onDispatch() first and grab the response
+      $response = parent::onDispatch($e);
+
+      // Set alternative layout
+      $this->layout()->setTemplate('layout/blog');
+
+      // Return the response
+      return $response;
+    }
+
     /**
      * This is the default "index" action of the controller. It displays the 
      * Recent Posts page containing the recent blog posts.
@@ -80,17 +97,4 @@ class IndexController extends AbstractActionController
         ]);
     }
     
-    /**
-     * This action displays the About page.
-     */
-    public function aboutAction() 
-    {   
-        $appName = 'Blog';
-        $appDescription = 'A simple blog application for the Using Zend Framework 3 book';
-        
-        return new ViewModel([
-            'appName' => $appName,
-            'appDescription' => $appDescription
-        ]);
-    }
 }

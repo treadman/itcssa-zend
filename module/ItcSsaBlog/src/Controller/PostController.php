@@ -6,9 +6,10 @@ use Zend\View\Model\ViewModel;
 use ItcSsaBlog\Form\PostForm;
 use ItcSsaBlog\Entity\Post;
 use ItcSsaBlog\Form\CommentForm;
+use Zend\Mvc\MvcEvent;
 
 /**
- * This is the Post controller class of the Blog application. 
+ * This is the Post controller class of the Blog. 
  * This controller is used for managing posts (adding/editing/viewing/deleting).
  */
 class PostController extends AbstractActionController 
@@ -34,6 +35,22 @@ class PostController extends AbstractActionController
         $this->postManager = $postManager;
     }
     
+    /** 
+     * We override the parent class onDispatch() method to
+     * set an alternative layout for all actions in this controller.
+     */
+    public function onDispatch(MvcEvent $e)
+    {
+      // Call the base class' onDispatch() first and grab the response
+      $response = parent::onDispatch($e);
+
+      // Set alternative layout
+      $this->layout()->setTemplate('layout/blog');
+
+      // Return the response
+      return $response;
+    }
+
     /**
      * This action displays the "New Post" page. The page contains a form allowing
      * to enter post title, content and tags. When the user clicks the Submit button,
@@ -61,7 +78,7 @@ class PostController extends AbstractActionController
                 $this->postManager->addNewPost($data);
                 
                 // Redirect the user to "index" page.
-                return $this->redirect()->toRoute('application');
+                return $this->redirect()->toRoute('blog');
             }
         }
         

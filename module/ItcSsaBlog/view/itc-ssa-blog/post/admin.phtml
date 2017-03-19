@@ -43,6 +43,12 @@ $this->pageBreadcrumbs()->setItems([
                     ['action'=>'edit', 'id'=>$post->getId()]); ?>">
                 <span class="glyphicon glyphicon-pencil" ></span> Edit
             </a>
+            <!--
+            <button type="button" class="btn btn-danger"
+                    onclick="confirmDeleteModal(<?= $post->getId(); ?>)">
+                <span class="glyphicon glyphicon-remove"></span> Delete Post
+            </button>
+            -->
             <a class="btn btn-danger" href="<?= $this->url('posts',
                     ['action'=>'delete', 'id'=>$post->getId()]); ?>">
                 <span class="glyphicon glyphicon-remove"></span> Delete
