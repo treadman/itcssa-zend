@@ -3,7 +3,7 @@
 $site_down = false;
 
 if ($site_down) {
-    echo '<div align="center"><h1>Industrial Training Consultants, Inc.<br>Safety &bull; Specialty &bull; Awards</h1><br><p>We apologize, but the site is down for maintenance</p></div>';
+    echo '<h1>Industrial Training Consultants, Inc.<br>Safety &bull; Specialty &bull; Awards</h1><br><p>We apologize, but the site is down for maintenance</p>';
     exit();
 }
 
