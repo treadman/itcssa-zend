@@ -30,8 +30,12 @@ $this->mainMenu()->setActiveItemId('home');
         </a>
     </p>
 
-    <p>    
-        <?= $this->escapeHtml($post->getContent()); ?>
+    <p> 
+
+
+
+    <pre><?= $this->escapeHtml($post->getContent()); ?></pre>
+
     </p>
 
     <?php endforeach; ?>
