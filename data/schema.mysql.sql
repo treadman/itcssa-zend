@@ -1,11 +1,11 @@
 -- To create a new database, run MySQL client:
 --   mysql -u root -p
 -- Then in MySQL client command line, type the following (replace <password> with password string):
---   create database blog;
---   grant all privileges on blog.* to blog@localhost identified by '<password>';
+--   create database itcssa;
+--   grant all privileges on itcssa.* to itcssa@localhost identified by '<password>';
 --   quit
 -- Then, in shell command line, type:
---   mysql -u root -p blog < schema.mysql.sql
+--   mysql -u root -p itcssa < schema.mysql.sql
 
 set names 'utf8';
 

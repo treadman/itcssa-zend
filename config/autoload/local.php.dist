@@ -22,7 +22,7 @@ return [
                     'host'     => '<server>',                    
                     'user'     => '<user>',
                     'password' => '<password>',
-                    'dbname'   => 'blog',
+                    'dbname'   => 'itcssa',
                 ]
             ],            
         ],        
