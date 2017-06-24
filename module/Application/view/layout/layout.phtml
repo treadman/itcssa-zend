@@ -35,6 +35,11 @@
                 'label' => 'Home',
                 'link' => $this->url('home')
             ],
+            [
+                'id' => 'users',
+                'label' => 'Users',
+                'link' => $this->url('users')
+            ],
         ]);
 
         // Check if the activeMenuItemId passed to layout view model
@@ -44,7 +49,7 @@
         }
 
         // Render the navbar
-        echo $this->mainMenu()->render($this->identity());
+        echo $this->mainMenu()->render();
         ?>
         <div class="container">
             <?php
