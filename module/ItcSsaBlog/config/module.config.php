@@ -59,6 +59,25 @@ return [
             Controller\PostController::class => Controller\Factory\PostControllerFactory::class,
         ],
     ],
+    'access_filter' => [
+        'options' => [
+            'mode' => 'restrictive'
+        ],
+        'controllers' => [
+            Controller\IndexController::class => [
+                // Allow anyone
+                ['actions' => ['index'], 'allow' => '*'],
+                // Allow only authorized users
+                ['actions' => [], 'allow' => '@']
+            ],
+            Controller\PostController::class => [
+                // Allow anyone
+                ['actions' => ['view'], 'allow' => '*'],
+                // Allow only authorized users
+                ['actions' => [], 'allow' => '@']
+            ],
+        ]
+    ],
     'service_manager' => [
         'factories' => [
             Service\PostManager::class => Service\Factory\PostManagerFactory::class,

@@ -38,8 +38,21 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
+            Controller\IndexController::class => Controller\Factory\IndexControllerFactory::class,
         ],
+    ],
+    'access_filter' => [
+        'options' => [
+            'mode' => 'restrictive'
+        ],
+        'controllers' => [
+            Controller\IndexController::class => [
+                // Allow anyone
+                ['actions' => ['index'], 'allow' => '*'],
+                // Allow only authorized users
+                ['actions' => [], 'allow' => '@']
+            ],
+        ]
     ],
     'view_helpers' => [
         'factories' => [

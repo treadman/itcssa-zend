@@ -62,22 +62,6 @@ return [
                     ],
                 ],
             ],
-            'user' => [
-                'type'    => 'Literal',
-                'options' => [
-                    // Change this to something specific to your module
-                    'route'    => '/user',
-                    'defaults' => [
-                        'controller'    => Controller\IndexController::class,
-                        'action'        => 'index',
-                    ],
-                ],
-                'may_terminate' => true,
-                'child_routes' => [
-                    // You can place additional routes that match under the
-                    // route defined above here.
-                ],
-            ],
         ],
     ],
     'controllers' => [
@@ -91,10 +75,9 @@ return [
     'access_filter' => [
         'controllers' => [
             Controller\UserController::class => [
-                // Give access to "resetPassword", "message" and "setPassword" actions
-                // to anyone.
+                // Give access to anyone
                 ['actions' => ['resetPassword', 'message', 'setPassword'], 'allow' => '*'],
-                // Give access to "index", "add", "edit", "view", "changePassword" actions to authorized users only.
+                // Give access to authorized users only
                 ['actions' => ['index', 'add', 'edit', 'view', 'changePassword'], 'allow' => '@']
             ],
         ]
