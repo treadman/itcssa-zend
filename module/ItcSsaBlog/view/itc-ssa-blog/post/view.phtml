@@ -23,7 +23,12 @@ $form->prepare();
 
 <a href="
     <?= $this->url('blog', ['action'=>'index']); ?>">
-    &lt;&lt; Back to list of posts
+    List of all blog posts
+</a>
+|
+<a href="
+    <?= $this->url('posts', ['action'=>'admin']); ?>">
+    Blog Admin
 </a>
 
 <h1>

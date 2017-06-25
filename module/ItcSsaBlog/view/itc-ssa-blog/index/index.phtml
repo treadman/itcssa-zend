@@ -4,6 +4,10 @@ $this->headTitle('Posts');
 $this->mainMenu()->setActiveItemId('home');
 
 ?>
+<a href="
+    <?= $this->url('posts', ['action'=>'admin']); ?>">
+    Blog Admin
+</a>
 
 <div class="row">
     

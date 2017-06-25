@@ -7,6 +7,10 @@ $this->pageBreadcrumbs()->setItems([
             'Admin'=>$this->url('home')
             ]);
 ?>
+<a href="
+    <?= $this->url('blog', ['action'=>'index']); ?>">
+    List of all blog posts
+</a>
 
 <h1>Manage Posts</h1>
 

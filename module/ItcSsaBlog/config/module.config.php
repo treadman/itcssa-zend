@@ -41,16 +41,6 @@ return [
                     ],
                 ],
             ],
-            'about' => [
-                'type' => Literal::class,
-                'options' => [
-                    'route'    => '/about',
-                    'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action'     => 'about',
-                    ],
-                ],
-            ],                                    
         ],
     ],
     'controllers' => [
