@@ -129,7 +129,7 @@ class UserManager
     
     /**
      * Generates a password reset token for the user. This token is then stored in database and 
-     * sent to the user's E-mail address. When the user clicks the link in E-mail message, he is 
+     * sent to the user's email address. When the user clicks the link in email message, he is 
      * directed to the Set Password page.
      */
     public function generatePasswordResetToken($user)

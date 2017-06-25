@@ -5,7 +5,7 @@ use Zend\Form\Form;
 use Zend\InputFilter\InputFilter;
 
 /**
- * This form is used to collect user's E-mail address (used to recover password).
+ * This form is used to collect user's email address (used to recover password).
  */
 class PasswordResetForm extends Form
 {
@@ -34,7 +34,7 @@ class PasswordResetForm extends Form
             'type'  => 'email',
             'name' => 'email',
             'options' => [
-                'label' => 'Your E-mail',
+                'label' => 'Your email',
             ],
         ]);
         

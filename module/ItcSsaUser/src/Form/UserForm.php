@@ -61,7 +61,7 @@ class UserForm extends Form
             'type'  => 'text',
             'name' => 'email',
             'options' => [
-                'label' => 'E-mail',
+                'label' => 'Email',
             ],
         ]);
         
