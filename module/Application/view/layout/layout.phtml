@@ -49,7 +49,7 @@
         }
 
         // Render the navbar
-        echo $this->mainMenu()->render();
+        echo $this->mainMenu()->render($this->identity());
         ?>
         <div class="container">
             <?php

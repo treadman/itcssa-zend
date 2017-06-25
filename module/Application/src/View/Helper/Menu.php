@@ -51,7 +51,7 @@ class Menu extends AbstractHelper
      * Renders the menu.
      * @return string HTML code of the menu.
      */
-    public function render()
+    public function render($identity)
     {
         if (count($this->items)==0)
             return ''; // Do nothing if there are no items.
@@ -77,9 +77,14 @@ class Menu extends AbstractHelper
         }
         
         $result .= '</ul>';
-        //if ($identity != null) {
-        //    $result .= '<div class="text-right">'.$identity.'</div>';
-        //}
+        $result .= '<div class="text-right">';
+        if ($identity != null) {
+            $result .= 'Welcome '.$identity.'<br>';
+            $result .= '<a href="\logout">Log out</a>';
+        } else {
+            $result .= '<a href="\login">Log in</a>';
+        }
+        $result .= '</div>';
         $result .= '</div>';
         $result .= '</div>';
         $result .= '</nav>';

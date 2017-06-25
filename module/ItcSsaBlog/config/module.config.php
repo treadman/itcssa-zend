@@ -86,9 +86,6 @@ return [
     // The following registers our custom view 
     // helper classes in view plugin manager.
     'view_manager' => [
-        'template_map' => [
-            'layout/blog'           => __DIR__ . '/../view/layout/blog.phtml',
-        ],
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
