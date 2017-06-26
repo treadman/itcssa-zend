@@ -31,11 +31,6 @@
         // Initialize navbar items
         $this->mainMenu()->setItems([
             [
-                'id' => 'home',
-                'label' => 'Home',
-                'link' => $this->url('home')
-            ],
-            [
                 'id' => 'users',
                 'label' => 'Users',
                 'link' => $this->url('users')
@@ -50,6 +45,7 @@
 
         // Render the navbar
         echo $this->mainMenu()->render($this->identity());
+        echo $this->pageBreadcrumbs()->render();
         ?>
         <div class="container">
             <?php
@@ -62,7 +58,7 @@
                         <div class="col-md-3">
                             <?php // TODO: ID=1 below should be passed in from the view? or controller or module? ?>
                             <a href="<?= $this->url('posts',
-                                    ['action'=>'view', 'id'=>1],
+                                    ['action'=>'view', 'id'=>2],
                                     ['fragment'=>'top']
                                 ); ?>">
                                 Click here to learn more

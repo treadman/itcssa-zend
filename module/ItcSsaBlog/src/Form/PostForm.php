@@ -127,9 +127,9 @@ class PostForm extends Form
         $inputFilter->add([
                 'name'     => 'content',
                 'required' => true,
-                'filters'  => [                    
-                    ['name' => 'StripTags'],
-                ],                
+                //'filters'  => [
+                //   ['name' => 'StripTags'],
+                //],
                 'validators' => [
                     [
                         'name'    => 'StringLength',

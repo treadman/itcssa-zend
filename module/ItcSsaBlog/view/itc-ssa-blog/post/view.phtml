@@ -4,7 +4,10 @@ $this->headTitle('View Post - ' . $post->getTitle());
 $this->mainMenu()->setActiveItemId('home');
 
 $this->pageBreadcrumbs()->setItems([
-            'Home'=>$this->url('home')
+            'Home'=>$this->url('home'),
+            'Blog Admin'=>$this->url('posts', ['action'=>'admin']),
+            'Blog Posts'=>$this->url('blog', ['action'=>'index']),
+            'View Post'=>''
             ]);
         
 $form = $this->form;
@@ -20,16 +23,6 @@ $form->get('comment')->setAttributes([
 $form->get('submit')->setAttributes(['class'=>'btn btn-primary']);
 $form->prepare();        
 ?>
-
-<a href="
-    <?= $this->url('blog', ['action'=>'index']); ?>">
-    List of all blog posts
-</a>
-|
-<a href="
-    <?= $this->url('posts', ['action'=>'admin']); ?>">
-    Blog Admin
-</a>
 
 <h1>
     <?= $this->escapeHtml($post->getTitle()); ?>    
@@ -48,7 +41,7 @@ $form->prepare();
 </p>
 
 <p>    
-    <?= $this->escapeHtml($post->getContent()); ?>
+    <?= $post->getContent(); ?>
 </p>
 
 <h3><?= $this->escapeHtml($postManager->getCommentCountStr($post)); ?></h3>

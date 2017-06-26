@@ -6,7 +6,7 @@ $this->mainMenu()->setActiveItemId('users');
 $this->pageBreadcrumbs()->setItems([
             'Home'=>$this->url('home'),
             'Manage Users'=>$this->url('users'),
-            'Add User'=>$this->url('users', ['action'=>'add'])
+            'Add User'=>''
             ]);
 
 $form->get('email')->setAttributes([
@@ -36,11 +36,8 @@ $form->get('submit')->setAttributes(['class'=>'btn btn-primary']);
 $form->prepare();
 ?>
 
-<h1>Add User</h1>
 
-<p>
-    Please fill out the following form and click the <i>Create</i> button.
-</p>
+<h1>Add User</h1>
 
 <div class="row">
     <div class="col-md-6">

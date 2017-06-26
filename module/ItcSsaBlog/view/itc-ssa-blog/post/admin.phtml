@@ -4,13 +4,11 @@ $this->headTitle('Manage Posts');
 $this->mainMenu()->setActiveItemId('admin');
 
 $this->pageBreadcrumbs()->setItems([
-            'Admin'=>$this->url('home')
+            'Home'=>$this->url('home'),
+            'Blog Posts'=>$this->url('blog', ['action'=>'index']),
+            'Blog Admin'=>$this->url('posts', ['action'=>'admin'])
             ]);
 ?>
-<a href="
-    <?= $this->url('blog', ['action'=>'index']); ?>">
-    List of all blog posts
-</a>
 
 <h1>Manage Posts</h1>
 
@@ -52,11 +50,11 @@ $this->pageBreadcrumbs()->setItems([
                     onclick="confirmDeleteModal(<?= $post->getId(); ?>)">
                 <span class="glyphicon glyphicon-remove"></span> Delete Post
             </button>
-            -->
             <a class="btn btn-danger" href="<?= $this->url('posts',
                     ['action'=>'delete', 'id'=>$post->getId()]); ?>">
                 <span class="glyphicon glyphicon-remove"></span> Delete
             </a>
+            -->
         </td>    
     </tr>
         

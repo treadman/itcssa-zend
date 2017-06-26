@@ -5,6 +5,8 @@ $this->mainMenu()->setActiveItemId('admin');
 
 $this->pageBreadcrumbs()->setItems([
             'Home'=>$this->url('home'),
+            'Blog Posts'=>$this->url('blog', ['action'=>'index']),
+            'Blog Admin'=>$this->url('posts', ['action'=>'admin']),
             'Edit Post'=>$this->url('posts', ['action'=>'edit'])
             ]);
 

@@ -3,11 +3,13 @@ $this->headTitle('Posts');
 
 $this->mainMenu()->setActiveItemId('home');
 
+$this->pageBreadcrumbs()->setItems([
+            'Home'=>$this->url('home'),
+            'Blog Admin'=>$this->url('posts', ['action'=>'admin']),
+            'Blog Posts'=>$this->url('blog', ['action'=>'index'])
+            ]);
+
 ?>
-<a href="
-    <?= $this->url('posts', ['action'=>'admin']); ?>">
-    Blog Admin
-</a>
 
 <div class="row">
     
@@ -38,8 +40,8 @@ $this->mainMenu()->setActiveItemId('home');
 
 
 
-    <pre><?= $this->escapeHtml($post->getContent()); ?></pre>
-
+<!--    <pre><?= $this->escapeHtml($post->getContent()); ?></pre>-->
+<?= $post->getContent(); ?>
     </p>
 
     <?php endforeach; ?>
